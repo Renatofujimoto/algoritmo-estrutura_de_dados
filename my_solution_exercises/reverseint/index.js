@@ -9,20 +9,9 @@
 //   reverseInt(-90) === -9
 
 // No arquivo reverse.js
-function reverse(str) {
-    let reversed = '';
-
-    for (let character of str) {
-        reversed = character + reversed;
-    }
-
-    return reversed;
+function reverseInt(n) {
+    return parseInt(n.toString().split('').reverse().join('')) * Math.sign(n);
 }
 
-export default reverse;
-
-import reverse from './reverse';
-
-const reversedString = reverse('hello');
-console.log(reversedString); // Deve imprimir "olleh"
+module.exports = reverseInt;
 

@@ -17,6 +17,24 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
 
+function steps(n) {
+
+    //percorrendo pra ver tamanho dos steps
+    for (let i = 0; i < n; i++) {
+        let estrelas = ''
+
+        //percorrendo o tamanho do step e adicionando espaços vazios
+        for (let colunas = 0; colunas < n; colunas++) {
+            //condição de adicao do '#' enquanto a coluna  for menor que o indice
+            if (colunas <= i) {
+                estrelas += '#'
+            } else {
+                estrelas += ' '
+            }
+        }
+        console.log(estrelas)
+    }
+}
+console.log(steps(4))
 module.exports = steps;
