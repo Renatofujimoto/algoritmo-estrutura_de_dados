@@ -60,6 +60,27 @@ class LinkedList {
         this.head = this.head.next
     }
 
+    removeLast() {
+
+        if (!this.head) {
+            return;
+        }
+
+        if (!this.head.next) {
+            return
+        }
+
+        let previos = this.head
+        let node = this.head.next
+
+        while(!node.next){
+            previos = node;
+            node = node.next
+        }
+
+        previos.next = null
+    }
+
 }
 
 // const list = new LinkedList();
