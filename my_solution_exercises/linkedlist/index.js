@@ -107,10 +107,22 @@ class LinkedList {
             if (counter === index) {
                 return node;
             }
+            counter++;
+            node = node.next;
         }
 
-        counter++;
-        node = node.next;
+        return null;
+    }
+
+    removeAt(index) {
+        
+        if (!this.head) {
+            return;
+        }
+
+        if (index === 0) {
+            this.head = this.head.next;
+        }
     }
 
 }
