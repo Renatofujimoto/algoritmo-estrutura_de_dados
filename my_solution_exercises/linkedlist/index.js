@@ -70,15 +70,28 @@ class LinkedList {
             return
         }
 
-        let previos = this.head
+        let previous = this.head
         let node = this.head.next
 
         while(!node.next){
-            previos = node;
+            previous = node;
             node = node.next
         }
 
-        previos.next = null
+        previous.next = null
+    }
+
+    insertLast(data){
+        const last = this.getLast();
+
+        if(last){
+            //there are some existing node in our chain
+            
+            last.next = new Node(data);
+        } else {
+            //the chain is empty!
+            new Node(data);
+        }
     }
 
 }
