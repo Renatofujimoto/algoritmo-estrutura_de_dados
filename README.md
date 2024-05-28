@@ -42,6 +42,8 @@ cd my_solution_exercises
 npm install
 
 yarn install
+
+npx jest linkedlist/test.js --watch (para rodar o teste)
 ```
 
 <h2 id="contribute">📫 Contribuição</h2>
